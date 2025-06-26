@@ -111,23 +111,23 @@ This flow outlines how a business owner (tenant admin) signs up, selects a plan,
 - The tenant sets up one or more `branches` (e.g. "Main Café", "Downtown Location").
 
 
-## 5. Set Up Products and Ingredients
-- Add menu items (`products`) and raw materials (`ingredients`).
-- Define categories, recipes, and modifiers as needed.
-
-
-## 6. Create Roles & Set Access Control
+## 5. Create Roles & Set Access Control
 - The tenant admin creates custom roles (e.g., Manager, Cashier, Kitchen Staff).
 - System stores:
   - Roles in `roles`.
   - Permissions in `role_permissions` or equivalent table.
 
 
-## 7. Add Staff & Assign Roles
+## 6. Add Staff & Assign Roles
 - The tenant invites or registers staff accounts.
 - Staff are linked to:
   - `users` with the same `tenant_id`.
   - Assigned roles via `user_roles`.
+
+
+## 7. Set Up Products and Ingredients
+- Add menu items (`products`) and raw materials (`ingredients`).
+- Define categories, recipes, and modifiers as needed.
 
 
 ## 8. Start Using POS
