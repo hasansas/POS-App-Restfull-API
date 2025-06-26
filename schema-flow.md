@@ -82,7 +82,7 @@ Supports products, ingredients, inventory tracking, orders, kitchen routing, and
 ---
 
 
-# 🧭 Tenancy Flow
+# 🧭 Tenancy Flow (Updated – No Diagram)
 
 This flow outlines how a business owner (tenant admin) signs up, selects a plan, configures the system, and starts using the POS.
 
@@ -101,36 +101,42 @@ This flow outlines how a business owner (tenant admin) signs up, selects a plan,
   - If payment is needed, `payment_status = 'pending'` until confirmed.
 
 
-## 3. Create Branch
+## 3. Update Tenant Profile
+- The user updates their business profile:
+  - `brand_name`, `logo_url`, `email`, `phone`, `address`, `timezone`, etc.
+- Updated in the `tenants` table.
+
+
+## 4. Create Branch
 - The tenant sets up one or more `branches` (e.g. "Main Café", "Downtown Location").
 
 
-## 4. Set Up Products and Ingredients
+## 5. Set Up Products and Ingredients
 - Add menu items (`products`) and raw materials (`ingredients`).
 - Define categories, recipes, and modifiers as needed.
 
 
-## 5. Create Roles & Set Access Control
+## 6. Create Roles & Set Access Control
 - The tenant admin creates custom roles (e.g., Manager, Cashier, Kitchen Staff).
 - System stores:
   - Roles in `roles`.
   - Permissions in `role_permissions` or equivalent table.
 
 
-## 6. Add Staff & Assign Roles
+## 7. Add Staff & Assign Roles
 - The tenant invites or registers staff accounts.
 - Staff are linked to:
   - `users` with the same `tenant_id`.
   - Assigned roles via `user_roles`.
 
 
-## 7. Start Using POS
+## 8. Start Using POS
 - Staff can now use the system based on their permissions.
 - Orders (`orders`, `order_items`) are placed.
 - Inventory is tracked via `inventory_movements`.
 
 
-## 8. Manage Subscription
+## 9. Manage Subscription
 - The tenant can:
   - View usage limits.
   - Upgrade or cancel their subscription.
