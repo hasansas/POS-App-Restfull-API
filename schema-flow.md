@@ -82,7 +82,7 @@ Supports products, ingredients, inventory tracking, orders, kitchen routing, and
 ---
 
 
-# 🧭 Tenancy Flow (Updated – No Diagram)
+# 🧭 Tenancy Flow
 
 This flow outlines how a business owner (tenant admin) signs up, selects a plan, configures the system, and starts using the POS.
 
